@@ -63,3 +63,21 @@ Day 2
 - Ran the complete test suite on Chrome.
 - Result: **7/7 tests passed**.
 - The practice website does not provide separate Specialty, Doctor, or Time Slot fields, so the available form fields were used as equivalent interactions.
+
+## Day 8 – DemoQA Date Picker
+
+### Objective
+To automate date selection using the DemoQA Date Picker.
+
+### Website
+https://demoqa.com/date-picker
+
+### Work Completed
+- Created `DemoQADatePage` using the Page Object Model.
+- Added a locator for the date input field.
+- Added a method to enter the appointment date.
+- Created `test_demoqa_date.py`.
+- Verified that the entered date is displayed correctly.
+
+### Test Result
+DemoQA Date Picker test passed successfully.
