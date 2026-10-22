@@ -1,55 +1,63 @@
-import time
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
+import json
 
 from pages.registration_page import RegistrationPage
 
 
-def test_valid_registration():
+with open("data/test_data.json", "r") as file:
+    test_data = json.load(file)
 
-    driver = webdriver.Chrome()
 
-    driver.get("https://www.qapractice.com/practice-forms")
-
-    WebDriverWait(driver, 10).until(
-        lambda d: d.find_element("id", "forms-country")
-    )
+def test_valid_registration(driver):
 
     registration_page = RegistrationPage(driver)
 
     # Country
-    registration_page.select_country("India")
+    registration_page.select_country(
+        test_data["valid_user"]["country"]
+    )
 
     # Title
-    registration_page.select_title("Ms.")
+    registration_page.select_title(
+        test_data["valid_user"]["title"]
+    )
 
     # First Name
-    registration_page.enter_first_name("Myra")
+    registration_page.enter_first_name(
+        test_data["valid_user"]["first_name"]
+    )
 
     # Last Name
-    registration_page.enter_last_name("Murata")
+    registration_page.enter_last_name(
+        test_data["valid_user"]["last_name"]
+    )
 
     # Date of Birth
-    registration_page.enter_dob("2000-05-12")
+    registration_page.enter_dob(
+        test_data["valid_user"]["dob"]
+    )
 
     # Date of Joining
-    registration_page.enter_doj("01/05/2026")
+    registration_page.enter_doj(
+        test_data["valid_user"]["doj"]
+    )
 
     # Email
-    registration_page.enter_email("myra@example.com")
+    registration_page.enter_email(
+        test_data["valid_user"]["email"]
+    )
 
     # Phone Code
-    registration_page.select_phone_code("+91")
+    registration_page.select_phone_code(
+        test_data["valid_user"]["phone_code"]
+    )
 
     # Phone Number
-    registration_page.enter_phone_number("9876543210")
+    registration_page.enter_phone_number(
+        test_data["valid_user"]["phone_number"]
+    )
 
     # Preferred Communication
     registration_page.select_email_communication()
 
     # Submit
     registration_page.click_submit()
-
-    time.sleep(2)
-
-    driver.quit()

@@ -1,0 +1,13 @@
+{
+    "valid_user": {
+        "country": "India",
+        "title": "Ms.",
+        "first_name": "Myra",
+        "last_name": "Murata",
+        "dob": "2000-05-12",
+        "doj": "01/05/2026",
+        "email": "myra@example.com",
+        "phone_code": "+91",
+        "phone_number": "9876543210"
+    }
+}
