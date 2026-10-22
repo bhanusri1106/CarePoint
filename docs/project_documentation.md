@@ -33,3 +33,12 @@ Day 2
 - Ran the complete test suite.
 - Result: 6/6 tests passed.
 - Added `reports/` to `.gitignore` so generated reports are not tracked by Git.
+
+## Day 5 - Cross-Browser Testing
+
+- Updated `conftest.py` to support browser selection.
+- Added `--browser` option to pytest.
+- Tested the registration test on Chrome and Edge.
+- Ran the complete test suite on both browsers.
+- Chrome: 6/6 tests passed.
+- Edge: 6/6 tests passed.

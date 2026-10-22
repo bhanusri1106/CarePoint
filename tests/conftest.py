@@ -5,10 +5,25 @@ from selenium.webdriver.support.ui import WebDriverWait
 from config.config import BASE_URL
 
 
-@pytest.fixture
-def driver():
+def pytest_addoption(parser):
+    parser.addoption(
+        "--browser",
+        action="store",
+        default="chrome"
+    )
 
-    driver = webdriver.Chrome()
+
+@pytest.fixture
+def driver(request):
+
+    browser = request.config.getoption("--browser")
+
+    if browser == "chrome":
+        driver = webdriver.Chrome()
+    elif browser == "edge":
+        driver = webdriver.Edge()
+    else:
+        raise ValueError("Browser must be chrome or edge")
 
     driver.get(BASE_URL)
 
