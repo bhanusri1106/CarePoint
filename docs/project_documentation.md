@@ -42,3 +42,10 @@ Day 2
 - Ran the complete test suite on both browsers.
 - Chrome: 6/6 tests passed.
 - Edge: 6/6 tests passed.
+## Day 6 - Reusable Base Page Methods
+
+- Improved `BasePage` with reusable Selenium methods.
+- Added common methods for finding elements, clicking, entering text, selecting values, and getting text.
+- Updated `RegistrationPage` to use these reusable methods.
+- Ran the complete test suite after the changes.
+- Result: 6/6 tests passed.
