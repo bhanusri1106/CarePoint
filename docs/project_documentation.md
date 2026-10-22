@@ -24,3 +24,12 @@ Day 2
 - Updated registration and validation tests to use the `driver` fixture.
 - Ran the complete test suite.
 - Result: 6/6 tests passed.
+
+## Day 4 - HTML Test Reporting
+
+- Created the `reports` folder for test reports.
+- Generated an HTML test report using `pytest-html`.
+- Created `CarePoint_Test_Report.hgit statustml`.
+- Ran the complete test suite.
+- Result: 6/6 tests passed.
+- Added `reports/` to `.gitignore` so generated reports are not tracked by Git.
