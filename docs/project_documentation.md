@@ -49,3 +49,17 @@ Day 2
 - Updated `RegistrationPage` to use these reusable methods.
 - Ran the complete test suite after the changes.
 - Result: 6/6 tests passed.
+
+### Day 7 - Appointment Booking Flow
+
+- Created `pages/appointment_page.py` for the appointment booking workflow.
+- Added reusable methods for entering appointment date and patient details.
+- Created `tests/test_appointment.py` for appointment booking.
+- Automated date, patient name, and email entry.
+- Automated form submission.
+- Added an assertion to verify the success message after submission.
+- Tested the appointment workflow on Chrome.
+- Tested the appointment workflow on Edge.
+- Ran the complete test suite on Chrome.
+- Result: **7/7 tests passed**.
+- The practice website does not provide separate Specialty, Doctor, or Time Slot fields, so the available form fields were used as equivalent interactions.
